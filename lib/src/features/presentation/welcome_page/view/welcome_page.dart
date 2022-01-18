@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/login_page/view/login_page.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -56,74 +57,21 @@ class WelcomePage extends StatelessWidget {
                       fontSize: 17.0,
                     )),
               ),
-              Container(
-                width: 350.0,
-                height: 45.0,
-                margin: const EdgeInsets.only(top: 20.0),
-                child: ElevatedButton(
+              roundedButton(
+                  context: context,
+                  label: 'Log in',
+                  color: Theme.of(context).colorScheme.secondary,
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => LoginPage()));
-                  },
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                        Theme.of(context).colorScheme.secondary),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0))),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(left: 10.0),
-                        child: const Text(
-                          'Login',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15.0,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
+                  }),
+              roundedButton(
+                context: context,
+                label: 'Connect with facebook',
+                isWithIcon: true,
+                color: Theme.of(context).colorScheme.onSecondary,
+                icon: const AssetImage('assets/images/facebook.png'),
               ),
-              Container(
-                width: 350.0,
-                height: 45.0,
-                margin: const EdgeInsets.only(top: 10.0),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                        Theme.of(context).colorScheme.onSecondary),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0))),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Image(
-                        image: AssetImage('assets/images/facebook.png'),
-                        height: 20.0,
-                        width: 20.0,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(left: 10.0),
-                        child: const Text(
-                          'Connect with facebook',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15.0,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              )
             ],
           )
         ],

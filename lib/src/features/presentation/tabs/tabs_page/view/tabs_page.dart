@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/alert_dialog.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/tabs/explore_tab/view/explore_tab.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/tabs/fovorites_tab/view/fovorites_tab.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/tabs/my_order_tab/view/my_order_tab.dart';
@@ -92,10 +92,13 @@ class _TabsPageState extends State<TabsPage> {
             'https://www.freeiconspng.com//uploads/localization-icon-13.png'),
         'Enable Your Location',
         'Please enable your location to use this app',
-        button(context, "Enable location", () {
-          print('enable location');
-          // Navigator.push(
-          //     context, MaterialPageRoute(builder: (context) => LoginPage()));
-        }));
+        roundedButton(
+            context: context,
+            label: "Enable location",
+            onPressed: () {
+              print('enable location');
+              // Navigator.push(
+              //     context, MaterialPageRoute(builder: (context) => LoginPage()));
+            }));
   }
 }

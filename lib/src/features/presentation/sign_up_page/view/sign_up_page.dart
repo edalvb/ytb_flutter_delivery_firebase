@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 // Colors
 import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/back_button.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -39,7 +39,7 @@ class SignUpPage extends StatelessWidget {
                 _input(context, 'Date of Birth', TextInputType.datetime),
                 _input(context, 'Password', TextInputType.visiblePassword,
                     obscureText: true),
-                button(context, 'Sign Up', () {}),
+                roundedButton(context: context, label: 'Sign Up'),
                 Container(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 20.0, vertical: 40.0),

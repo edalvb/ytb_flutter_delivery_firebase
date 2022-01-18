@@ -9,7 +9,7 @@ import 'package:ytb_flutter_delivery_firebase/src/features/presentation/forgot_p
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/sign_up_page/view/sign_up_page.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/tabs/tabs_page/view/tabs_page.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/back_button.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
 
 class LoginPage extends StatelessWidget {
@@ -66,12 +66,15 @@ class LoginPage extends StatelessWidget {
                           ),
                           _emailInput(),
                           _passwordInput(),
-                          button(context, "Login", () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => TabsPage()));
-                          }),
+                          roundedButton(
+                              context: context,
+                              label: "Login",
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => TabsPage()));
+                              }),
                           Container(
                             margin: const EdgeInsets.only(top: 30.0),
                             child: GestureDetector(

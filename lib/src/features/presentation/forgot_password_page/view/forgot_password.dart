@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/alert_dialog.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/back_button.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/login_page/view/login_page.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
 
 class ForgotPassword extends StatelessWidget {
@@ -38,9 +38,12 @@ class ForgotPassword extends StatelessWidget {
                 ),
               ),
               _emailInput(),
-              button(context, "Send", () {
-                _showDialog(context);
-              }),
+              roundedButton(
+                  context: context,
+                  label: "Send",
+                  onPressed: () {
+                    _showDialog(context);
+                  }),
             ],
           ),
         ),
@@ -76,9 +79,12 @@ void _showDialog(BuildContext context) {
         'https://icon-library.com/images/reset-password-icon/reset-password-icon-29.jpg'),
     'Your password has been reset',
     "Tou'll shortly receive an email a code to setup a new password",
-    button(context, "Done", () {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => LoginPage()));
-    }),
+    roundedButton(
+        context: context,
+        label: "Done",
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => LoginPage()));
+        }),
   );
 }
