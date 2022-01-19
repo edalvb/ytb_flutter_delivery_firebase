@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/filter_page/view/filter_page.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/forgot_password_page/view/forgot_password.dart';
 
 // Pages
@@ -15,4 +16,5 @@ final routes = <String, WidgetBuilder>{
   'sign_up': (BuildContext context) => SignUpPage(),
   'tabs': (BuildContext context) => TabsPage(),
   'search': (BuildContext context) => SearchPage(),
+  'filter': (BuildContext context) => FilterPage(),
 };
