@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
 
 Widget roundedButton({
-  required BuildContext context,
   required String label,
   ImageProvider<Object>? icon,
   Color color = orange,
@@ -25,21 +24,15 @@ Widget roundedButton({
       height: height,
       margin: const EdgeInsets.only(top: 10.0),
       child: isWithIcon
-          ? _elevatedButtonWithIcon(
-              context, radius, image, label, color, onPressed)
-          : _elevatedButtonNotIcon(context, radius, label, color, onPressed));
+          ? _elevatedButtonWithIcon(radius, image, label, color, onPressed)
+          : _elevatedButtonNotIcon(radius, label, color, onPressed));
 }
 
 // AssetImage('assets/images/facebook.png')
 //
 
-Widget _elevatedButtonWithIcon(
-    BuildContext context,
-    double radius,
-    ImageProvider<Object> image,
-    String label,
-    Color color,
-    void Function()? onPressed) {
+Widget _elevatedButtonWithIcon(double radius, ImageProvider<Object> image,
+    String label, Color color, void Function()? onPressed) {
   return ElevatedButton(
     onPressed: onPressed,
     style: ButtonStyle(
@@ -71,8 +64,12 @@ Widget _elevatedButtonWithIcon(
 }
 
 // 'Connect with facebook'
-Widget _elevatedButtonNotIcon(BuildContext context, double radius, String label,
-    Color color, void Function()? onPressed) {
+Widget _elevatedButtonNotIcon(
+  double radius,
+  String label,
+  Color color,
+  void Function()? onPressed,
+) {
   return ElevatedButton(
     onPressed: onPressed,
     style: ButtonStyle(

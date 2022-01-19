@@ -39,11 +39,9 @@ class ForgotPassword extends StatelessWidget {
               ),
               _emailInput(),
               roundedButton(
-                  context: context,
-                  label: "Send",
-                  onPressed: () {
-                    _showDialog(context);
-                  }),
+                label: "Send",
+                onPressed: () => _showDialog(context),
+              ),
             ],
           ),
         ),
@@ -80,7 +78,6 @@ void _showDialog(BuildContext context) {
     'Your password has been reset',
     "Tou'll shortly receive an email a code to setup a new password",
     roundedButton(
-        context: context,
         label: "Done",
         onPressed: () {
           Navigator.push(

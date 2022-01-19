@@ -58,7 +58,6 @@ class WelcomePage extends StatelessWidget {
                     )),
               ),
               roundedButton(
-                  context: context,
                   label: 'Log in',
                   color: Theme.of(context).colorScheme.secondary,
                   onPressed: () {
@@ -66,7 +65,6 @@ class WelcomePage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => LoginPage()));
                   }),
               roundedButton(
-                context: context,
                 label: 'Connect with facebook',
                 isWithIcon: true,
                 color: Theme.of(context).colorScheme.onSecondary,

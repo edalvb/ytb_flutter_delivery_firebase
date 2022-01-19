@@ -39,7 +39,7 @@ class SignUpPage extends StatelessWidget {
                 _input(context, 'Date of Birth', TextInputType.datetime),
                 _input(context, 'Password', TextInputType.visiblePassword,
                     obscureText: true),
-                roundedButton(context: context, label: 'Sign Up'),
+                roundedButton(label: 'Sign Up'),
                 Container(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 20.0, vertical: 40.0),

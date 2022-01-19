@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/alert_dialog.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/rounded_button.dart';
+
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/tabs/explore_tab/view/explore_tab.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/tabs/fovorites_tab/view/fovorites_tab.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/tabs/my_order_tab/view/my_order_tab.dart';
@@ -69,19 +71,6 @@ class _TabsPageState extends State<TabsPage> {
           label: "Profile",
         ),
       ],
-      // onTap: (index) {
-      //   switch (index) {
-      //     case 0:
-      //       Navigator.pushNamed(context, "/");
-      //       break;
-      //     case 1:
-      //       Navigator.pushNamed(context, "/search");
-      //       break;
-      //     case 2:
-      //       Navigator.pushNamed(context, "/profile");
-      //       break;
-      //   }
-      // },
     );
   }
 
@@ -93,7 +82,6 @@ class _TabsPageState extends State<TabsPage> {
         'Enable Your Location',
         'Please enable your location to use this app',
         roundedButton(
-            context: context,
             label: "Enable location",
             onPressed: () {
               print('enable location');

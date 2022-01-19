@@ -67,13 +67,14 @@ class LoginPage extends StatelessWidget {
                           _emailInput(),
                           _passwordInput(),
                           roundedButton(
-                              context: context,
                               label: "Login",
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => TabsPage()));
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => TabsPage()));
+
+                                Navigator.pushNamed(context, 'tabs');
                               }),
                           Container(
                             margin: const EdgeInsets.only(top: 30.0),
@@ -128,7 +129,7 @@ class LoginPage extends StatelessWidget {
                                         style: TextStyle(
                                           color: Theme.of(context)
                                               .colorScheme
-                                              .onSecondary,
+                                              .secondary,
                                           fontWeight: FontWeight.w400,
                                           fontSize: 15.0,
                                         ),
@@ -192,38 +193,3 @@ Widget _passwordInput() {
     ),
   );
 }
-
-// Widget _loginButton(BuildContext context) {
-//   return Container(
-//     // width: 350.0,
-//     height: 45.0,
-//     margin: const EdgeInsets.only(top: 20.0),
-//     child: ElevatedButton(
-//       onPressed: () {
-//         Navigator.push(
-//             context, MaterialPageRoute(builder: (context) => LoginPage()));
-//       },
-//       style: ButtonStyle(
-//         backgroundColor:
-//             MaterialStateProperty.all(Theme.of(context).colorScheme.secondary),
-//         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-//             RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0))),
-//       ),
-//       child: Row(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: [
-//           Container(
-//             margin: const EdgeInsets.only(left: 10.0),
-//             child: const Text(
-//               'Login',
-//               style: TextStyle(
-//                 color: Colors.white,
-//                 fontSize: 17.0,
-//               ),
-//             ),
-//           )
-//         ],
-//       ),
-//     ),
-//   );
-// }
