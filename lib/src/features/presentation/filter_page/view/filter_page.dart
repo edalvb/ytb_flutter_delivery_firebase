@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/filter_page/custom_widgets/cuisines_filter.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/filter_page/custom_widgets/cuisines_sort.dart';
 
 class FilterPage extends StatefulWidget {
   FilterPage({Key? key}) : super(key: key);
@@ -29,9 +30,23 @@ class _FilterPageState extends State<FilterPage> {
                 fontSize: 17,
               ),
             ),
-            Padding(
+            Container(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: CuisinesFilter(),
+            ),
+            Container(
+              alignment: Alignment.centerLeft,
+              margin: EdgeInsets.only(top: 15, bottom: 15, left: 15),
+              child: textHeader(
+                'SORT BY',
+                color: gris,
+                fontWeight: FontWeight.w600,
+                fontSize: 17,
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: CuisinesSort(),
             ),
           ]))
         ],
