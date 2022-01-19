@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/card_populares.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/card_vertical.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/header_double.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
@@ -38,6 +39,39 @@ class SearchPage extends StatelessWidget {
                       textAction: 'Clear all',
                     ),
                     _sliderRecentSearch(context),
+                    const SizedBox(height: 20),
+                    headerDoubleText(
+                        text: 'Recomended for you', textAction: ''),
+                    cardPopulares(
+                      context: context,
+                      title: "Andy & Cindy' Dinner",
+                      subtitle: "87 Botsford Circle Apt",
+                      review: "4.0",
+                      rating: "230 ratings",
+                      hasActionButton: false,
+                      image: const NetworkImage(
+                          'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                    ),
+                    cardPopulares(
+                      context: context,
+                      title: "Andy & Cindy' Dinner",
+                      subtitle: "87 Botsford Circle Apt",
+                      review: "4.0",
+                      rating: "230 ratings",
+                      hasActionButton: false,
+                      image: const NetworkImage(
+                          'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                    ),
+                    cardPopulares(
+                      context: context,
+                      title: "Andy & Cindy' Dinner",
+                      subtitle: "87 Botsford Circle Apt",
+                      review: "4.0",
+                      rating: "230 ratings",
+                      hasActionButton: false,
+                      image: const NetworkImage(
+                          'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                    ),
                   ],
                 ),
               ),

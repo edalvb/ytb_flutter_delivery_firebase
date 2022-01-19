@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/card_populares.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
 
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
@@ -23,12 +24,39 @@ class ExploreTab extends StatelessWidget {
                       textHeader('Discover new places'),
                       _sliderCards(),
                       _headers(context, 'Popular this week', 'Show all'),
-                      _populares(context,
-                          'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
-                      _populares(context,
-                          'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
-                      _populares(context,
-                          'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                      cardPopulares(
+                        context: context,
+                        title: "Andy & Cindy' Dinner",
+                        subtitle: "87 Botsford Circle Apt",
+                        review: "4.0",
+                        rating: "230 ratings",
+                        buttonText: "Delivery",
+                        hasActionButton: true,
+                        image: const NetworkImage(
+                            'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                      ),
+                      cardPopulares(
+                        context: context,
+                        title: "Andy & Cindy' Dinner",
+                        subtitle: "87 Botsford Circle Apt",
+                        review: "4.0",
+                        rating: "230 ratings",
+                        buttonText: "Delivery",
+                        hasActionButton: true,
+                        image: const NetworkImage(
+                            'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                      ),
+                      cardPopulares(
+                        context: context,
+                        title: "Andy & Cindy' Dinner",
+                        subtitle: "87 Botsford Circle Apt",
+                        review: "4.0",
+                        rating: "230 ratings",
+                        buttonText: "Delivery",
+                        hasActionButton: true,
+                        image: const NetworkImage(
+                            'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                      ),
                       const SizedBox(height: 10),
                       _headers(context, 'Popular this week', 'Show all'),
                       _sliderCollections(),
@@ -228,81 +256,6 @@ Widget _headers(BuildContext context, String text, String textAction) {
         ],
       ),
     ),
-  ]);
-}
-
-Widget _populares(BuildContext context, String foto) {
-  return Column(children: [
-    Container(
-      margin: const EdgeInsets.only(left: 10.0),
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Row(children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
-          child: Image(
-            width: 80,
-            height: 80,
-            fit: BoxFit.cover,
-            image: NetworkImage(foto),
-          ),
-        ),
-        Container(
-          padding: const EdgeInsets.only(left: 20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                margin: const EdgeInsets.symmetric(vertical: 7.0),
-                child: textHeader("Andy & Cindy' Dinner", fontSize: 17.0),
-              ),
-              Container(
-                alignment: Alignment.centerLeft,
-                margin: const EdgeInsets.only(bottom: 5.0),
-                // margin: const EdgeInsets.symmetric(vertical: 7.0),
-                child: textHeader("87 Botsford Circle Apt",
-                    fontSize: 13.0, color: gris, fontWeight: FontWeight.w500),
-              ),
-              Row(
-                children: [
-                  const Icon(Icons.star, color: amarillo, size: 16.0),
-                  textHeader("4.0",
-                      fontSize: 13.0, color: gris, fontWeight: FontWeight.w500),
-                  Container(
-                    margin: const EdgeInsets.only(left: 5.0),
-                    child: textHeader("230 ratings",
-                        fontSize: 13.0,
-                        color: gris,
-                        fontWeight: FontWeight.w500),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(left: 35.0),
-                    width: 110.0,
-                    height: 18.0,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                        elevation: MaterialStateProperty.all(0.5),
-                        shape: MaterialStateProperty.all(const StadiumBorder()),
-                        backgroundColor: MaterialStateProperty.all(
-                            Theme.of(context).colorScheme.secondary),
-                      ),
-                      child: const Text(
-                        "Delivery",
-                        style: TextStyle(
-                          fontSize: 10.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              )
-            ],
-          ),
-        )
-      ]),
-    )
   ]);
 }
 
