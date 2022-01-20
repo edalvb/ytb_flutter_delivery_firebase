@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/collection_detail_page/view/collection_detail_page.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/collections_page/view/collections_page.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/filter_page/view/filter_page.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/forgot_password_page/view/forgot_password.dart';
@@ -19,4 +20,5 @@ final routes = <String, WidgetBuilder>{
   'search': (BuildContext context) => SearchPage(),
   'filter': (BuildContext context) => FilterPage(),
   'collections': (BuildContext context) => CollectionsPage(),
+  'collections-detail': (BuildContext context) => CollectionsDetailPage(),
 };
