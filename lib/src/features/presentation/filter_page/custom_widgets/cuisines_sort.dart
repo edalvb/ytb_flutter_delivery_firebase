@@ -3,7 +3,16 @@ import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
 
 class CuisinesSort extends StatefulWidget {
-  const CuisinesSort({Key? key}) : super(key: key);
+  String texto;
+  bool isActive;
+  void Function()? onTap;
+
+  CuisinesSort({
+    Key? key,
+    required this.texto,
+    this.isActive = false,
+    this.onTap,
+  }) : super(key: key);
 
   @override
   _CuisinesSortState createState() => _CuisinesSortState();
@@ -16,8 +25,9 @@ class _CuisinesSortState extends State<CuisinesSort> {
       children: <Widget>[
         _listTiles(
           context: context,
-          title: 'Top Rated',
-          isActive: true,
+          title: widget.texto,
+          isActive: widget.isActive,
+          onTap: widget.onTap,
         )
       ],
     );
@@ -45,14 +55,16 @@ Widget _listTiles({
       onTap: onTap,
       title: textHeader(
         title,
-        color: isActive ? orange : gris,
+        color: isActive ? orange : Colors.black,
         fontWeight: FontWeight.w300,
         fontSize: 17,
       ),
-      trailing: Icon(
-        Icons.check,
-        color: isActive ? orange : gris,
-      ),
+      trailing: isActive
+          ? Icon(
+              Icons.check,
+              color: orange,
+            )
+          : SizedBox(width: 0),
     ),
   );
 }

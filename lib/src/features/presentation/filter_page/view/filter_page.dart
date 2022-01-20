@@ -12,6 +12,18 @@ class FilterPage extends StatefulWidget {
 }
 
 class _FilterPageState extends State<FilterPage> {
+  // Sort by booleans
+  bool topRated = false;
+  bool nearMe = false;
+  bool costHighToLow = false;
+  bool costLowToHigh = false;
+  bool mostPopular = false;
+
+  // Filter booleans
+  bool openNow = false;
+  bool creditCard = false;
+  bool alcoholServed = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +48,7 @@ class _FilterPageState extends State<FilterPage> {
             ),
             Container(
               alignment: Alignment.centerLeft,
-              margin: EdgeInsets.only(top: 15, bottom: 15, left: 15),
+              margin: EdgeInsets.only(top: 15, bottom: 5, left: 15),
               child: textHeader(
                 'SORT BY',
                 color: gris,
@@ -44,11 +56,79 @@ class _FilterPageState extends State<FilterPage> {
                 fontSize: 17,
               ),
             ),
+            _sortBy(),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: CuisinesSort(),
+              alignment: Alignment.centerLeft,
+              margin: EdgeInsets.only(top: 25, bottom: 5, left: 15),
+              child: textHeader(
+                'FILTER',
+                color: gris,
+                fontWeight: FontWeight.w600,
+                fontSize: 17,
+              ),
             ),
-          ]))
+            _filterBy(),
+          ])),
+        ],
+      ),
+    );
+  }
+
+  Widget _sortBy() {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: Column(
+        children: [
+          CuisinesSort(
+            texto: 'Top Rated',
+            isActive: topRated,
+            onTap: () => setState(() => topRated = !topRated),
+          ),
+          CuisinesSort(
+            texto: 'Nearest Me',
+            isActive: nearMe,
+            onTap: () => setState(() => nearMe = !nearMe),
+          ),
+          CuisinesSort(
+            texto: 'Cost High To Low',
+            isActive: costHighToLow,
+            onTap: () => setState(() => costHighToLow = !costHighToLow),
+          ),
+          CuisinesSort(
+            texto: 'Cost Low To High',
+            isActive: costLowToHigh,
+            onTap: () => setState(() => costLowToHigh = !costLowToHigh),
+          ),
+          CuisinesSort(
+            texto: 'Most Popular',
+            isActive: mostPopular,
+            onTap: () => setState(() => mostPopular = !mostPopular),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _filterBy() {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: Column(
+        children: [
+          CuisinesSort(
+            texto: 'Open Now',
+            isActive: openNow,
+            onTap: () => setState(() => openNow = !openNow),
+          ),
+          CuisinesSort(
+            texto: 'Credids Cards',
+            isActive: creditCard,
+            onTap: () => setState(() => creditCard = !creditCard),
+          ),
+          CuisinesSort(
+            texto: 'Alcohol Served',
+            isActive: alcoholServed,
+            onTap: () => setState(() => alcoholServed = !alcoholServed),
+          ),
         ],
       ),
     );
