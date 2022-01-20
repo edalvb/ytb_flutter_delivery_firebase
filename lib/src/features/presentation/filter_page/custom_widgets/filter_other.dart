@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
 
-class CuisinesSort extends StatefulWidget {
+class FilterOther extends StatefulWidget {
   String texto;
   bool isActive;
   void Function()? onTap;
 
-  CuisinesSort({
+  FilterOther({
     Key? key,
     required this.texto,
     this.isActive = false,
@@ -15,10 +15,10 @@ class CuisinesSort extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _CuisinesSortState createState() => _CuisinesSortState();
+  _FilterOtherState createState() => _FilterOtherState();
 }
 
-class _CuisinesSortState extends State<CuisinesSort> {
+class _FilterOtherState extends State<FilterOther> {
   @override
   Widget build(BuildContext context) {
     return Column(

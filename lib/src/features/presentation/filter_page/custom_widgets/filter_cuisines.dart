@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
 
-class CuisinesFilter extends StatefulWidget {
-  CuisinesFilter({Key? key}) : super(key: key);
+class FilterCuisines extends StatefulWidget {
+  FilterCuisines({Key? key}) : super(key: key);
 
   @override
-  _CuisinesFilterState createState() => _CuisinesFilterState();
+  _FilterCuisinesState createState() => _FilterCuisinesState();
 }
 
-class _CuisinesFilterState extends State<CuisinesFilter> {
+class _FilterCuisinesState extends State<FilterCuisines> {
   bool btnAmerica = false;
   bool btnSushi = false;
   bool btnAsia = false;
