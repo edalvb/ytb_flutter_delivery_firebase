@@ -8,9 +8,9 @@ import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/forgot_password_page/view/forgot_password.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/sign_up_page/view/sign_up_page.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/tabs/tabs_page/view/tabs_page.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/back_button.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/rounded_button.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/BackButtons/back_button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Headers/text_header.dart';
 
 class LoginPage extends StatelessWidget {
   @override

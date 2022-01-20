@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/card_populares.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/card_vertical.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/header_double.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Cards/card_populares.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Cards/card_vertical.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Headers/header_double.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Headers/text_header.dart';
 
 class SearchPage extends StatelessWidget {
   @override

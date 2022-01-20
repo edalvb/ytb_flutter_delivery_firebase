@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/alert_dialog.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/back_button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/alerts/alert_dialog.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/BackButtons/back_button.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/login_page/view/login_page.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/rounded_button.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Headers/text_header.dart';
 
 class ForgotPassword extends StatelessWidget {
   @override

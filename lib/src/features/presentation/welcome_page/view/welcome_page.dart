@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/rounded_button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/login_page/view/login_page.dart';
 
 class WelcomePage extends StatelessWidget {

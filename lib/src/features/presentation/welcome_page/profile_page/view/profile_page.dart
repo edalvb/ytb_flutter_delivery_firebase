@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
 
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/text_header.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Headers/text_header.dart';
 
 class ProfilePage extends StatefulWidget {
   @override

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/alert_dialog.dart';
-import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/rounded_button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/alerts/alert_dialog.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
 
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/tabs/explore_tab/view/explore_tab.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/tabs/fovorites_tab/view/fovorites_tab.dart';
