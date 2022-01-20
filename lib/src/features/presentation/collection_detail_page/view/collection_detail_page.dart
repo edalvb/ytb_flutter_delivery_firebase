@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/BackButtons/back_button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Cards/card_favourites.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Headers/text_header.dart';
 
 class CollectionsDetailPage extends StatelessWidget {
@@ -12,7 +14,7 @@ class CollectionsDetailPage extends StatelessWidget {
         slivers: <Widget>[
           SliverAppBar(
             expandedHeight: 230,
-            backgroundColor: Colors.white,
+            backgroundColor: orange,
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
                 children: [
@@ -37,7 +39,7 @@ class CollectionsDetailPage extends StatelessWidget {
                       fontSize: 35,
                       textAlign: TextAlign.center,
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -59,6 +61,82 @@ class CollectionsDetailPage extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           fontSize: 17,
                         ),
+                      ),
+                      Column(
+                        children: [
+                          cardFavourites(
+                            context: context,
+                            title: "Andy & Cindy' Dinner",
+                            subtitle: "87 Botsford Circle Apt",
+                            review: "4.0",
+                            rating: "230 ratings",
+                            hasActionButton: false,
+                            isFavourites: true,
+                            marginContainer: EdgeInsets.only(bottom: 20),
+                            image: const NetworkImage(
+                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                          ),
+                          cardFavourites(
+                            context: context,
+                            title: "Andy & Cindy' Dinner",
+                            subtitle: "87 Botsford Circle Apt",
+                            review: "4.0",
+                            rating: "230 ratings",
+                            hasActionButton: false,
+                            isFavourites: false,
+                            marginContainer: EdgeInsets.only(bottom: 20),
+                            image: const NetworkImage(
+                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                          ),
+                          cardFavourites(
+                            context: context,
+                            title: "Andy & Cindy' Dinner",
+                            subtitle: "87 Botsford Circle Apt",
+                            review: "4.0",
+                            rating: "230 ratings",
+                            hasActionButton: false,
+                            isFavourites: false,
+                            marginContainer: EdgeInsets.only(bottom: 20),
+                            image: const NetworkImage(
+                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                          ),
+                          cardFavourites(
+                            context: context,
+                            title: "Andy & Cindy' Dinner",
+                            subtitle: "87 Botsford Circle Apt",
+                            review: "4.0",
+                            rating: "230 ratings",
+                            hasActionButton: false,
+                            isFavourites: false,
+                            marginContainer: EdgeInsets.only(bottom: 20),
+                            image: const NetworkImage(
+                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                          ),
+                          cardFavourites(
+                            context: context,
+                            title: "Andy & Cindy' Dinner",
+                            subtitle: "87 Botsford Circle Apt",
+                            review: "4.0",
+                            rating: "230 ratings",
+                            hasActionButton: false,
+                            isFavourites: false,
+                            marginContainer: EdgeInsets.only(bottom: 20),
+                            image: const NetworkImage(
+                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                          ),
+                          cardFavourites(
+                            context: context,
+                            title: "Andy & Cindy' Dinner",
+                            subtitle: "87 Botsford Circle Apt",
+                            review: "4.0",
+                            rating: "230 ratings",
+                            hasActionButton: false,
+                            isFavourites: false,
+                            marginContainer: EdgeInsets.only(bottom: 20),
+                            image: const NetworkImage(
+                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                          ),
+                        ],
                       ),
                     ],
                   ),
