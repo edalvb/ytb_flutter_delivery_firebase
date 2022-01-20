@@ -58,7 +58,13 @@ class ExploreTab extends StatelessWidget {
                             'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
                       ),
                       const SizedBox(height: 10),
-                      _headers(context, 'Popular this week', 'Show all'),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, 'collections');
+                        },
+                        child:
+                            _headers(context, 'Popular this week', 'Show all'),
+                      ),
                       _sliderCollections(),
                     ],
                   ),
