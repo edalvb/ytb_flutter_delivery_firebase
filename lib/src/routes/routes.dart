@@ -6,6 +6,7 @@ import 'package:ytb_flutter_delivery_firebase/src/features/presentation/forgot_p
 
 // Pages
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/login_page/view/login_page.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/place_detail_page/view/place_detail_page.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/search_page/view/search_page.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/sign_up_page/view/sign_up_page.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/tabs/tabs_page/view/tabs_page.dart';
@@ -21,4 +22,5 @@ final routes = <String, WidgetBuilder>{
   'filter': (BuildContext context) => FilterPage(),
   'collections': (BuildContext context) => CollectionsPage(),
   'collections-detail': (BuildContext context) => CollectionsDetailPage(),
+  'place-detail': (BuildContext context) => PlaceDetailPage(),
 };

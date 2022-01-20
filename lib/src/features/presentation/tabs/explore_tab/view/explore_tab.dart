@@ -153,92 +153,97 @@ Widget _sliderCards() {
 }
 
 Widget _tarjeta(BuildContext context) {
-  return Container(
-    margin: const EdgeInsets.all(5.0),
-    child: Column(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
-          child: const Image(
-            width: 210,
-            height: 250,
-            fit: BoxFit.cover,
-            image: NetworkImage('https://picsum.photos/200/300'),
+  return GestureDetector(
+    onTap: () {
+      Navigator.pushNamed(context, 'place-detail');
+    },
+    child: Container(
+      margin: const EdgeInsets.all(5.0),
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20.0),
+            child: const Image(
+              width: 210,
+              height: 250,
+              fit: BoxFit.cover,
+              image: NetworkImage('https://picsum.photos/200/300'),
+            ),
           ),
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              margin: const EdgeInsets.only(top: 10.0),
-              child: const Text(
-                "Andy & Cindy's Diner",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 17.0,
-                ),
-              ),
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "87 Botsfor Cirlcle Apt",
-                style: TextStyle(
-                  color: Theme.of(context).disabledColor,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 13.0,
-                ),
-              ),
-            ),
-            Row(
-              children: [
-                const Icon(
-                  Icons.star,
-                  color: amarillo,
-                  size: 16.0,
-                ),
-                const Text(
-                  "4.8",
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                margin: const EdgeInsets.only(top: 10.0),
+                child: const Text(
+                  "Andy & Cindy's Diner",
                   style: TextStyle(
                     color: Colors.black,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 13.0,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17.0,
                   ),
                 ),
-                const Text(
-                  "(233 ratings)",
+              ),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "87 Botsfor Cirlcle Apt",
                   style: TextStyle(
-                    color: gris,
+                    color: Theme.of(context).disabledColor,
                     fontWeight: FontWeight.w600,
                     fontSize: 13.0,
                   ),
                 ),
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                  width: 80.0,
-                  height: 18.0,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      elevation: MaterialStateProperty.all(0.5),
-                      backgroundColor: MaterialStateProperty.all(
-                          Theme.of(context).colorScheme.secondary),
-                      shape: MaterialStateProperty.all(const StadiumBorder()),
+              ),
+              Row(
+                children: [
+                  const Icon(
+                    Icons.star,
+                    color: amarillo,
+                    size: 16.0,
+                  ),
+                  const Text(
+                    "4.8",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 13.0,
                     ),
-                    child: const Text(
-                      "Delivery",
-                      style: TextStyle(
-                        fontSize: 10.0,
+                  ),
+                  const Text(
+                    "(233 ratings)",
+                    style: TextStyle(
+                      color: gris,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13.0,
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                    width: 80.0,
+                    height: 18.0,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                        elevation: MaterialStateProperty.all(0.5),
+                        backgroundColor: MaterialStateProperty.all(
+                            Theme.of(context).colorScheme.secondary),
+                        shape: MaterialStateProperty.all(const StadiumBorder()),
+                      ),
+                      child: const Text(
+                        "Delivery",
+                        style: TextStyle(
+                          fontSize: 10.0,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
-            )
-          ],
-        )
-      ],
+                ],
+              )
+            ],
+          )
+        ],
+      ),
     ),
   );
 }
