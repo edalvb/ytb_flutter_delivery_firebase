@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ytb_flutter_delivery_firebase/src/colors/colors.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/BackButtons/back_button.dart';
+import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Headers/header_double.dart';
 import 'package:ytb_flutter_delivery_firebase/src/features/presentation/commons_widgets/Headers/text_header.dart';
 
 class PlaceDetailPage extends StatelessWidget {
@@ -63,11 +64,79 @@ class PlaceDetailPage extends StatelessWidget {
                 onPressed: () {},
               ),
             ],
-          )
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                _header(texto: 'Populars'),
+                _sliderCards(),
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
+}
+
+Widget _header({required String texto}) {
+  return Container(
+    margin: const EdgeInsets.only(top: 20, bottom: 5),
+    padding: const EdgeInsets.symmetric(horizontal: 20),
+    child: headerDoubleText(text: texto, textAction: ''),
+  );
+}
+
+Widget _sliderCards() {
+  return Container(
+    height: 210,
+    padding: const EdgeInsets.only(left: 10),
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemBuilder: (BuildContext _, int index) {
+        return _cards();
+      },
+    ),
+  );
+}
+
+Widget _cards() {
+  return Container(
+    margin: EdgeInsets.all(8),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: Image(
+            width: 200,
+            height: 100,
+            fit: BoxFit.cover,
+            image: NetworkImage(
+                'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-roast-beef-vertical-1540505165.jpg?crop=1.00xw:0.668xh;0,0&resize=640:*'),
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          child: textHeader(
+            'Peanut Chaat with Dahi',
+            fontWeight: FontWeight.bold,
+            fontSize: 15,
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          alignment: Alignment.centerLeft,
+          child: textHeader(
+            'S/ 9.50',
+            color: gris,
+            fontWeight: FontWeight.w500,
+            fontSize: 14,
+          ),
+        ),
+      ],
+    ),
+  );
 }
 
 Widget _promoBottom() {
