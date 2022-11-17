@@ -52,11 +52,13 @@ Widget _header() {
             Container(
               height: 25.0,
               margin: const EdgeInsets.only(left: 20.0),
-              child: RaisedButton(
+              child: ElevatedButton(
                 onPressed: () {},
-                color: rosa,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5.0)),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: rosa,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5.0)),
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

@@ -74,7 +74,7 @@ class CollectionsDetailPage extends StatelessWidget {
                             isFavourites: true,
                             marginContainer: EdgeInsets.only(bottom: 20),
                             image: const NetworkImage(
-                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                                'https://static-sevilla.abc.es/media/gurmesevilla/2012/01/comida-rapida-casera.jpg'),
                           ),
                           cardFavourites(
                             context: context,
@@ -86,7 +86,7 @@ class CollectionsDetailPage extends StatelessWidget {
                             isFavourites: false,
                             marginContainer: EdgeInsets.only(bottom: 20),
                             image: const NetworkImage(
-                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                                'https://static-sevilla.abc.es/media/gurmesevilla/2012/01/comida-rapida-casera.jpg'),
                           ),
                           cardFavourites(
                             context: context,
@@ -98,7 +98,7 @@ class CollectionsDetailPage extends StatelessWidget {
                             isFavourites: false,
                             marginContainer: EdgeInsets.only(bottom: 20),
                             image: const NetworkImage(
-                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                                'https://static-sevilla.abc.es/media/gurmesevilla/2012/01/comida-rapida-casera.jpg'),
                           ),
                           cardFavourites(
                             context: context,
@@ -110,7 +110,7 @@ class CollectionsDetailPage extends StatelessWidget {
                             isFavourites: false,
                             marginContainer: EdgeInsets.only(bottom: 20),
                             image: const NetworkImage(
-                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                                'https://static-sevilla.abc.es/media/gurmesevilla/2012/01/comida-rapida-casera.jpg'),
                           ),
                           cardFavourites(
                             context: context,
@@ -122,7 +122,7 @@ class CollectionsDetailPage extends StatelessWidget {
                             isFavourites: false,
                             marginContainer: EdgeInsets.only(bottom: 20),
                             image: const NetworkImage(
-                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                                'https://static-sevilla.abc.es/media/gurmesevilla/2012/01/comida-rapida-casera.jpg'),
                           ),
                           cardFavourites(
                             context: context,
@@ -134,7 +134,7 @@ class CollectionsDetailPage extends StatelessWidget {
                             isFavourites: false,
                             marginContainer: EdgeInsets.only(bottom: 20),
                             image: const NetworkImage(
-                                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                                'https://static-sevilla.abc.es/media/gurmesevilla/2012/01/comida-rapida-casera.jpg'),
                           ),
                         ],
                       ),

@@ -33,7 +33,7 @@ class ExploreTab extends StatelessWidget {
                         buttonText: "Delivery",
                         hasActionButton: true,
                         image: const NetworkImage(
-                            'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                            'https://static-sevilla.abc.es/media/gurmesevilla/2012/01/comida-rapida-casera.jpg'),
                       ),
                       cardPopulares(
                         context: context,
@@ -44,7 +44,7 @@ class ExploreTab extends StatelessWidget {
                         buttonText: "Delivery",
                         hasActionButton: true,
                         image: const NetworkImage(
-                            'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                            'https://static-sevilla.abc.es/media/gurmesevilla/2012/01/comida-rapida-casera.jpg'),
                       ),
                       cardPopulares(
                         context: context,
@@ -55,7 +55,7 @@ class ExploreTab extends StatelessWidget {
                         buttonText: "Delivery",
                         hasActionButton: true,
                         image: const NetworkImage(
-                            'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                            'https://static-sevilla.abc.es/media/gurmesevilla/2012/01/comida-rapida-casera.jpg'),
                       ),
                       const SizedBox(height: 10),
                       GestureDetector(
@@ -301,7 +301,7 @@ Widget _tarjetaCollection(BuildContext context) {
             height: 150,
             fit: BoxFit.cover,
             image: NetworkImage(
-                'https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg'),
+                'https://static-sevilla.abc.es/media/gurmesevilla/2012/01/comida-rapida-casera.jpg'),
           ),
         ),
       ],
